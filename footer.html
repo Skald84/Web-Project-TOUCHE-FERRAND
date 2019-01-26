@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Footer</title>
+		<meta charset="utf-8">
+	<style>
+/*Général*/
+		@font-face{
+			font-family: 'Raleway';
+			src: url('Police/Raleway/Raleway-Medium.ttf');
+		}
+		*{
+			font-family: 'Raleway';
+			margin:0;
+		}
+		ul>li{
+			list-style: none;
+		}
+
+/*Footer*/
+		footer{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			padding: 0rem 10rem;
+
+			color:white;
+			background-color: #2B2B2B;
+		}
+
+	/*Arborescence*/
+		footer ul{
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+
+			margin: 2rem;
+
+			border-left: 3px solid white;
+		}
+		footer>ul>li>button{
+			color:white;
+			font-size: 14px;
+			font-weight: bold;
+
+			text-align: left;
+
+			width: 10rem;
+			margin: 1rem 0rem;
+
+			border: none;
+			background:rgb(0,0,0,0);
+		}
+		footer>ul>li>button :hover{
+			font-size: 16px;
+			border-right: 2px solid white;
+			transition: 0.3s;
+		}
+
+	/*présentation projet*/
+		footer #footergauche{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		footer>div>p{
+			text-align: center;
+			line-height: 2rem;
+			margin:1rem;
+		}
+		footer #validation{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+
+			margin: 1rem;
+		}
+		footer #validation>img{
+			width: 7rem;
+			height: 3rem;
+			margin-top: 0rem;
+		}
+
+	/*Social media*/
+		#footerdroit{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			width: 20%;
+		}
+		footer #footerlogo{
+			width: 10rem;
+			height: 10rem;
+			margin: 1rem;
+		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-direction: row;
+		}
+		footer a>img{
+			width: 2rem;
+			height: 2rem;
+			margin: 1rem;
+		}
+	</style>
+</head>
+<body>
+<!--footer-->
+	<footer>
+	<!--footer gauche-->
+		<ul id="footergauche">
+			<li><button>Accueil</button></li>
+			<li><button>Liste des produits</button></li>
+			<li><button>Description de produit</button></li>
+			<li><button>Panier</button></li>
+			<li><button>Qui sommes nous ?</button></li>
+			<li><button>CR du projet</button></li>
+		</ul>
+
+	<!--footer centre-->
+		<div id="footercentre">
+			<p>
+				Un site web fièrement présenté<br>
+				par<br>
+				Aymeric TOUCHE & Gérome FERRAND<br>
+				IUT LYON 1 ASPE INFO<br>
+				projet Web (HTML5/CSS3)<br>
+				2018/2019<br>
+			</p>
+			<div id="validation">
+				<img alt="site en HTML5 validé par le W3C" src="images/W3CValidator/W3CHTML5Validation.png">
+				<img alt="site en CSS3 validé par le W3C" src="images/W3CValidator/W3CCSS3Validation.png">	
+			</div>
+		</div>
+
+	<!--footer droit-->
+		<div id="footerdroit">
+			<img id="footerlogo" src="images/icones/icon.facebook.png">
+			<h3>Suivez-nous !</h3>
+			<div id="boutonsocialmedia">
+				<a href=""><img alt="Suivez-nous sur facebook" src="images/icones/icon.facebook.png"></a>
+				<a href=""><img alt="Suivez-nous sur twitter" src="images/icones/icon.twitter.png"></a>
+				<a href=""><img alt="Suivez-nous sur instagram" src="images/icones/icon.instagram.png"></a>
+				<a href=""><img alt="Suivez-nous sur linkedin" src="images/icones/icon.linkedin.png"></a>
+				<a href=""><img alt="Suivez-nous sur youtube" src="images/icones/icon.youtube.png"></a>
+				<a href=""><img alt="Suivez-nous sur google+" src="images/icones/icon.google+.png"></a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

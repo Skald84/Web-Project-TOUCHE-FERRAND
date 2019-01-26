@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Page de liste de produits</title>
+	<meta charset="utf-8">
+	<style>
+/*Général*/
+		@font-face{
+			font-family: 'Raleway';
+			src: url('Police/Raleway/Raleway-Medium.ttf');
+		}
+		*{
+			font-family: 'Raleway';
+		}
+
+/*header*/
+		nav{ 
+		   background-image:  -webkit-gradient(linear, 34% 3%, 18% 100%, from(#00F4FC), to(#C949B8), color-stop(.5,#999999));
+		   position:fixed;
+		   top: 0rem;
+		   left: 0rem;
+		   margin: 0 auto;
+		   width: 100%;
+		   opacity: 1;
+		   z-index: 10;
+		}
+		nav ul{
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    font-size: 1.2rem;
+		    height: 3rem;
+		}
+		nav a{
+		color: white;
+		text-decoration:none; 
+		}
+		nav ul li{
+		    width: 100%;
+		    list-style-type: none;
+		    display: flex;
+		    justify-content: center;
+		}
+		nav input{
+		    opacity: 0.4;
+		}
+
+		nav ul li .bouton{
+		    background-image: url(images/icons8-search-30.png);
+		    width: 2rem;
+		    height: 2rem;
+		} 
+/*Corps*/
+
+		#corps{
+			display: flex;
+		}
+		#menu1{
+			text-align: center;
+			background-color: gray;
+		}
+
+		#menu2{
+			width: 15%;
+
+			color: white;
+			background-color: #444;
+		}
+
+		#liste{
+			width: 85%;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: space-between;
+		}
+		.destination{
+			display: flex;
+			flex-direction: row;
+
+			width: 97rem;
+			height:25rem;
+			margin: 12px;
+			border-radius: 3px;
+
+			box-shadow: 10px 10px 5px #555;
+
+			background-repeat: no-repeat;
+			background-attachment: local;
+			background-size: 100% 100%;
+		}
+		#destination1{
+			justify-content: flex-end;
+			background-image: url(images/paysage/science-fiction-illustration-01.jpg);
+		}
+		#destination2{
+			background-image: url(images/orbite/orbite1.jpg);
+		}
+		#destination3{
+			justify-content: flex-end;
+			background-image: url(images/orbite/orbite2.jpg);
+		}
+		#destination4{
+			background-image: url(images/orbite/orbite3.jpg);
+		}
+		#destination5{
+			justify-content: flex-end;
+			background-image: url(images/orbite/orbite8.jpg);
+		}
+		#destination6{
+			background-image: url(images/orbite/orbite5.jpg);
+		}
+
+		.etiquette{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+			width: 30%;
+			height: 76%;/*to fix : débrouilles toi pour mettre ça à 100%*/
+			padding: 3rem;
+
+			color: white;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+		.btnExplo{/*to design : trouver un style pour le boutton explo (+hover)*/
+			width: 12rem;
+			height: 4rem;
+			border-style: solid;
+			border-radius: 1px;
+			border: none;
+
+			color: white;
+			font-weight: bold;
+
+			border-color: #00F4FC;
+			background-color: #00F4FC;
+			background-image: linear-gradient(rgba(255,255,255,0), black);
+			transition: background-color 1s;
+		}
+		.btnExplo:hover{
+			transform: translateY(-3px);
+			background-color: #C949B8;
+		}
+		#article{
+			color: white;
+			text-align: justify;
+		}
+		/*To do : gérer les filtres (CSS/HTML)*/
+
+/*Footer*/
+		footer{
+
+		}
+	</style>
+</head>
+<body>
+
+<!--header-->
+    <nav>
+        <ul>
+            <li><img src="images/icons8-launchpad-96.png"></li>
+            <li><a href="">Accueil</a></li>
+            <li><a href="">Séjours</a></li>
+            <li><a href="">Les bons plans</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><input id="search" type="chanp" value="Search ... " /> <input class="bouton" type="button" value=" " /></li>
+            <li></li>
+            <li><img src="images/icons8-launchpad-96.png"></li>
+            <ul>
+    </nav>
+    <h1>Partez maintenant !</h1>
+
+<!--corps-->
+	<div id="corps">
+		<!--barre des filtres-->
+		<section id="menu2">
+			<ul>
+				<li><a href=""></a>Filtre1</li>
+				<li><a href=""></a>Filtre2</li>
+				<li><a href=""></a>Filtre3</li>
+				<li><a href=""></a>Filtre4</li>
+			</ul>
+		</section>
+		<!--barre des filtres-->
+
+		<!--liste articles-->
+		<div id="liste">
+			<!--Destination1-->
+			<div class="destination" id="destination1">
+				<div class="etiquette">
+					<article id="article">
+						<h3>Destination 1</h3>
+						<p>Vestibulum sit amet turpis facilisis tellus viverra bibendum at ac lacus. Morbi pharetra enim nulla, et efficitur sapien consectetur ut. Nulla pulvinar consequat convallis. Quisque posuere id nisl vestibulum tincidunt. Suspendisse sed tortor tempus, aliquet turpis vel, dignissim odio. Praesent hendrerit quam sapien, non gravida est commodo quis. Duis maximus ligula at ultrices posuere. Proin placerat, ante eget fringilla tempor, lacus est posuere libero, sit amet aliquet tortor lacus nec mi.</p>
+					</article>
+					<button class="btnExplo">Explorer !</button>
+				</div>
+			</div>
+			<!--Destination1-->
+			<!--Destination2-->
+			<div class="destination" id="destination2">
+				<div class="etiquette">
+					<article>
+						<h3>Destination 2</h3>
+						<p>Vestibulum sit amet turpis facilisis tellus viverra bibendum at ac lacus. Morbi pharetra enim nulla, et efficitur sapien consectetur ut. Nulla pulvinar consequat convallis. Quisque posuere id nisl vestibulum tincidunt. Suspendisse sed tortor tempus, aliquet turpis vel, dignissim odio. Praesent hendrerit quam sapien, non gravida est commodo quis. Duis maximus ligula at ultrices posuere. Proin placerat, ante eget fringilla tempor, lacus est posuere libero, sit amet aliquet tortor lacus nec mi.</p>
+					</article>
+					<button class="btnExplo">Explorer !</button>
+				</div>
+			</div>
+			<!--Destination2-->
+			<!--Destination3-->
+			<div class="destination" id="destination3">
+				<div class="etiquette">
+					<article>
+						<h3>Destination 3</h3>
+						<p>Vestibulum sit amet turpis facilisis tellus viverra bibendum at ac lacus. Morbi pharetra enim nulla, et efficitur sapien consectetur ut. Nulla pulvinar consequat convallis. Quisque posuere id nisl vestibulum tincidunt. Suspendisse sed tortor tempus, aliquet turpis vel, dignissim odio. Praesent hendrerit quam sapien, non gravida est commodo quis. Duis maximus ligula at ultrices posuere. Proin placerat, ante eget fringilla tempor, lacus est posuere libero, sit amet aliquet tortor lacus nec mi.</p>
+					</article>
+					<button class="btnExplo">Explorer !</button>
+				</div>
+			</div>
+			<!--Destination3-->
+			<!--Destination4-->
+			<div class="destination" id="destination4">
+				<div class="etiquette">
+					<article>
+						<h3>Destination 4</h3>
+						<p>Vestibulum sit amet turpis facilisis tellus viverra bibendum at ac lacus. Morbi pharetra enim nulla, et efficitur sapien consectetur ut. Nulla pulvinar consequat convallis. Quisque posuere id nisl vestibulum tincidunt. Suspendisse sed tortor tempus, aliquet turpis vel, dignissim odio. Praesent hendrerit quam sapien, non gravida est commodo quis. Duis maximus ligula at ultrices posuere. Proin placerat, ante eget fringilla tempor, lacus est posuere libero, sit amet aliquet tortor lacus nec mi.</p>
+					</article>
+					<button class="btnExplo">Explorer !</button>
+				</div>
+			</div>
+			<!--Destination4-->
+			<!--Destination5-->
+			<div class="destination" id="destination5">
+				<div class="etiquette">
+					<article>
+						<h3>Destination 5</h3>
+						<p>Vestibulum sit amet turpis facilisis tellus viverra bibendum at ac lacus. Morbi pharetra enim nulla, et efficitur sapien consectetur ut. Nulla pulvinar consequat convallis. Quisque posuere id nisl vestibulum tincidunt. Suspendisse sed tortor tempus, aliquet turpis vel, dignissim odio. Praesent hendrerit quam sapien, non gravida est commodo quis. Duis maximus ligula at ultrices posuere. Proin placerat, ante eget fringilla tempor, lacus est posuere libero, sit amet aliquet tortor lacus nec mi.</p>
+					</article>
+					<button class="btnExplo">Explorer !</button>
+				</div>
+			</div>
+			<!--Destination5-->
+			<!--Destination6-->
+			<div class="destination" id="destination6">
+				<div class="etiquette">
+					<article>
+						<h3>Destination 6</h3>
+						<p>Vestibulum sit amet turpis facilisis tellus viverra bibendum at ac lacus. Morbi pharetra enim nulla, et efficitur sapien consectetur ut. Nulla pulvinar consequat convallis. Quisque posuere id nisl vestibulum tincidunt. Suspendisse sed tortor tempus, aliquet turpis vel, dignissim odio. Praesent hendrerit quam sapien, non gravida est commodo quis. Duis maximus ligula at ultrices posuere. Proin placerat, ante eget fringilla tempor, lacus est posuere libero, sit amet aliquet tortor lacus nec mi.</p>
+					</article>
+					<button class="btnExplo">Explorer !</button>
+				</div>
+			</div>
+			<!--Destination6-->
+		</div>
+		<!--liste articles-->
+	</div>
+
+<!--footer-->
+	<footer>
+		
+	</footer>
+
+</body>
+</html>
