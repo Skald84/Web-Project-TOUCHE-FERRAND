@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<title>Footer</title>
-		<meta charset="utf-8">
+	<meta charset="utf-8">
 	<style>
 /*Général*/
 		@font-face{
@@ -13,15 +13,14 @@
 			font-family: 'Raleway';
 			margin:0;
 		}
-		ul>li{
-			list-style: none;
-		}
 
 /*Footer*/
 		footer{
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
+
+			max-height: 15rem;
 
 			padding: 0rem 10rem;
 
@@ -34,6 +33,7 @@
 			display: flex;
 			flex-direction: column;
 			text-align: left;
+			list-style: none;
 
 			margin: 2rem;
 
@@ -41,21 +41,23 @@
 		}
 		footer>ul>li>button{
 			color:white;
-			font-size: 14px;
-			font-weight: bold;
+			font-size: 12px;
+			font-weight: normal;
 
 			text-align: left;
 
 			width: 10rem;
-			margin: 1rem 0rem;
+			margin: 0.5rem 0rem;
+			padding: 0rem;
 
 			border: none;
 			background:rgb(0,0,0,0);
 		}
-		footer>ul>li>button :hover{
-			font-size: 16px;
+		footer>ul>li>button:hover{
+			font-size: 12px;
+			font-weight: bold;
+
 			border-right: 2px solid white;
-			transition: 0.3s;
 		}
 
 	/*présentation projet*/
@@ -67,9 +69,10 @@
 		}
 
 		footer>div>p{
+			font-size: 12px;
 			text-align: center;
-			line-height: 2rem;
-			margin:1rem;
+			line-height: 1.5rem;
+			margin: 1rem;
 		}
 		footer #validation{
 			display: flex;
@@ -79,8 +82,8 @@
 			margin: 1rem;
 		}
 		footer #validation>img{
-			width: 7rem;
-			height: 3rem;
+			width: 5rem;
+			height: 2rem;
 			margin-top: 0rem;
 		}
 
@@ -88,24 +91,26 @@
 		#footerdroit{
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 			align-items: center;
 
 			width: 20%;
 		}
 		footer #footerlogo{
-			width: 10rem;
-			height: 10rem;
+			width: 7rem;
+			height: 7rem;
 			margin: 1rem;
 		}
 		footer #boutonsocialmedia{
 			display: flex;
-			flex-direction: row;
+			flex-flow: row wrap;
 		}
 		footer a>img{
-			width: 2rem;
-			height: 2rem;
-			margin: 1rem;
+			width: 1.5rem;
+			height: 1.5rem;
+			margin: 0.5rem;
 		}
+
 	</style>
 </head>
 <body>
@@ -139,7 +144,7 @@
 
 	<!--footer droit-->
 		<div id="footerdroit">
-			<img id="footerlogo" src="images/icones/icon.facebook.png">
+			<img alt="Logo de l'agence de voyage galactique" id="footerlogo" src="images/icones/icon.facebook.png">
 			<h3>Suivez-nous !</h3>
 			<div id="boutonsocialmedia">
 				<a href=""><img alt="Suivez-nous sur facebook" src="images/icones/icon.facebook.png"></a>
