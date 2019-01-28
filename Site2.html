@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Mon site de voyage</title>
+        <link rel="stylesheet" href="Site_voyage2.css" />
+    </head>
+
+    <body>
+	    	<header>
+				<nav>
+					 <ul>
+						<li id="logo1"><img alt="logo" src="images/logo.png"></li>
+						<li id="acc"><a href="Site2.html">Accueil</a></li>
+						<li id="Sej"><a href="PageListeProduit.html">Séjours</a></li>
+						<li id="promo"><a href="">Les bons plans</a></li>
+						<li id="zone_embarquement">
+							<p>
+								<a href="Site_voyage_zone_embarquement.html"><img  id="ticket" src="images/ticket.png" alt="icone_ticket"></a>
+							</p>
+							<a href="Site_voyage_zone_embarquement.html"><p>Embarquement</p></a>
+						</li>
+						<li id="search">
+								<input id="search" type="text" placeholder="Search ... " /> 
+								<a href="PageListeProduit.html">
+									<input class="bouton" type="button" value=" " />
+								</a>
+						</li>
+						<li><img alt="logo" src="images/logo.png"></li>
+					 </ul>
+				</nav>
+			</header>
+
+	    	<div id="bandeau1">
+	    		<section class="titre">
+	    		<h1>Un petit pas pour l'Homme, un grand pas pour l'humanité<br><br>Partez à la decouverte du cosmos... </h1>
+				</section>
+				<!--grille système solaire-->
+					<section class="SolSys">
+						<img class="sun" alt="img_sun" src="images/icons8-sun-star-96.png">
+						<img class="mercury" alt="img_mercury" src="images/icons8-planète-mercure-96.png">
+						<img class="venus" alt="img_venus" src="images/icons8-planète-venus-96(1).png">
+						<img class="earth" alt="img_earth" src="images/icons8-planète-terre-96.png">
+						<img class="mars" alt="img_mars" src="images/icons8-planète-mars-96.png">
+						<img class="jupiter" alt="img_jupiter" src="images/icons8-planète-jupiter-96.png">
+						<img class="saturn" alt="img_saturn" src="images/icons8-planète-saturne-96.png">
+						<img class="uranus" alt="img_uranus" src="images/icons8-planète-uranus-96.png">
+						<img class="neptune" alt="img_neptune" src="images/icons8-planète-neptune-96.png">	
+					</section>
+	    	</div>
+    	
+			<!--Choix voyage-->
+				<div id="voyage">
+					<h1>Partez maintenant !</h1>
+					<section id="formulaire">
+			    		<form action="#" method="post">
+			    			<p>
+			    				<select>
+			    					<optgroup label="Tourisme orbital">
+					    				<option>Neptune</option>
+					    				<option>Uranus</option>
+					    				<option>Jupiter</option>
+					    				<option>Soleil</option>
+					    			</optgroup>
+			    					<optgroup label="Tourisme">
+					    				<option>Mars</option>
+					    				<option>Mercure</option>
+					    				<option>Venus</option>
+					    			</optgroup>
+			    			</select>
+			    			</p>
+			    			<p>
+			    				<input id="date1" type="date" max="2021-12-31" />
+			    				<a href="PageDescriptionArticle.html">
+			    					<input class="bouton2" type="button" value="" />
+			    				</a>
+			    			</p>
+			    		</form>
+					</section>
+				</div>
+<!--footer-->
+	<footer>
+	<!--footer gauche-->
+		<ul class="footerelement" id="footergauche">
+			<li><a href="Site2.html"><button>Accueil</button></a></li>
+			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li>
+			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li>
+			<li><a href="Site_voyage_zone_embarquement.html"><button>Panier</button></a></li>
+			<li><a href="About_us.html"><button>Qui sommes nous ?</button></a></li>
+			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li>
+		</ul>
+
+	<!--footer centre-->
+		<div class="footerelement" id="footercentre">
+			<p>
+				Un site web fièrement présenté<br>
+				par<br>
+				Aymeric TOUCHE & Gérome FERRAND<br>
+				IUT LYON 1 ASPE INFO<br>
+				projet Web (HTML5/CSS3)<br>
+				2018/2019<br>
+			</p>
+			<div id="validation">
+				<img alt="site en HTML5 validé par le W3C" src="images/W3CValidator/W3CHTML5Validation.png">
+				<img alt="site en CSS3 validé par le W3C" src="images/W3CValidator/W3CCSS3Validation.png">	
+			</div>
+		</div>
+
+	<!--footer droit-->
+		<div class="footerelement" id="footerdroit">
+			<img alt="Logo de l'agence de voyage galactique" id="footerlogo" src="images/logo.png">
+			<h3>Suivez-nous !</h3>
+			<div id="boutonsocialmedia">
+				<a href=""><img alt="Suivez-nous sur facebook" src="images/icones/icon.facebook.png"></a>
+				<a href=""><img alt="Suivez-nous sur twitter" src="images/icones/icon.twitter.png"></a>
+				<a href=""><img alt="Suivez-nous sur instagram" src="images/icones/icon.instagram.png"></a>
+				<a href=""><img alt="Suivez-nous sur linkedin" src="images/icones/icon.linkedin.png"></a>
+				<a href=""><img alt="Suivez-nous sur youtube" src="images/icones/icon.youtube.png"></a>
+				<a href=""><img alt="Suivez-nous sur google+" src="images/icones/icon.google+.png"></a>
+			</div>
+		</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+@font-face 
+{
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.ttf');
+}
+@font-face 
+{
+    font-family: 'earthorbiter';
+    src: url('fonts/earthorbiter.ttf');
+}
+body{
+	font-family: 'earthorbiter';
+	display: flex;
+	flex-direction: column;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+/*------MENU------*/
+	nav{ 
+	   background-image: linear-gradient(to bottom right, #2B2B2B, #1F1E1E);
+	   position:fixed;
+	   top: 0;
+	   left: 0;
+	   right: 0;
+	   margin: 0 auto;
+	   opacity: 1;
+	   z-index: 10;
+	}
+	nav ul{
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    font-size: 1.2rem;
+	    height: 7rem;
+	    padding: 0;
+	}
+	nav a{
+	color: white;
+	text-decoration:none; 
+	}
+	nav ul li{
+	    width: 100%;
+	    list-style-type: none;
+	    display: flex;
+	    justify-content: center;
+	}
+	nav input{
+	    opacity: 0.4;
+	    width:9rem;
+	}
+	nav img{
+		height: 5rem;
+		width: auto;
+	}
+	#ticket{
+	    width: 3rem;
+	    height: 3rem;
+	}
+	#zone_embarquement{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+	}
+	li p{
+		margin: 0rem;
+	    padding: 0rem;
+	    text-align: center;
+	    font-size: 0.8rem;
+	    color: white;
+	}
+	nav ul li .bouton{
+	    background-image: url(images/icons8-search-30.png);
+	    width: 2rem;
+	    height: 2rem;
+	} 
+
+
+/*Système solaire*/
+	#bandeau1{
+		background-image: url(images/fdp.jpg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 60rem;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.titre{
+		margin-top: 3rem;
+	}
+	.titre h1{
+		width: 60%;
+		height: auto;
+		margin-left: auto;
+	    margin-right: auto;
+		background-color:rgba(0, 0, 0, 0.5);
+		color: white;
+		opacity: 0.8;
+		border-radius: 0.2rem;
+		font-family: 'earthorbiter';
+		border-style: solid;
+		border-color: white;
+		padding: 3%;
+	}
+	.titre h1:hover{
+		border-color:rgba(255, 255, 255, 0.5);
+		background-color:rgba(255, 255, 255, 0.5);
+		color: red;
+		transition:3s;
+	}
+
+
+	/*------GRILLE SYSTEME SOLAIRE------*/
+		.SolSys{
+		    display: grid;
+		    grid-template-columns: repeat(9, 15%);
+		    grid-template-rows: repeat(9, 15%);
+		    margin-top: -4rem;
+		    margin-left: -12rem;
+		}
+		.SolSys img:hover{
+			height: 10rem;
+    		width: 10rem;
+    		z-index: 1;
+		}
+		.sun {
+		    grid-column-start: 5;
+		    grid-column-end: 6;
+		    grid-row-end: 5;
+		    grid-row-end: 6;
+		    height: 8.2rem;
+		    width: 8.2rem;
+		}
+		.mercury{
+		    grid-column-start: 6;
+		    grid-column-end: 7;
+		    grid-row-start: 6;
+		    grid-row-end: 7;
+		}
+		.venus{
+		    grid-column-start: 4;
+		    grid-column-end: 5;
+		    grid-row-start: 4;
+		    grid-row-end: 5;
+		}
+		.earth{
+		    grid-column-start: 3;
+		    grid-column-end: 4;
+		    grid-row-start: 6;
+		    grid-row-end: 7;
+		}
+		.mars{
+		    grid-column-start: 7;
+		    grid-column-end: 8;
+		    grid-row-start: 4;
+		    grid-row-end: 5;  
+		}
+		.jupiter{
+		    grid-column-start: 4;
+		    grid-column-end: 5;
+		    grid-row-start: 7;
+		    grid-row-end: 8;
+		}
+		.saturn{
+		    grid-column-start: 6;
+		    grid-column-end: 7;
+		    grid-row-start: 3;
+		    grid-row-end: 4;
+		}
+		.uranus{
+		    grid-column-start: 8;
+		    grid-column-end: 9;
+		    grid-row-start: 5;
+		    grid-row-end: 6;
+		}
+		.neptune{
+		    grid-column-start: 2;
+		    grid-column-end: 3;
+		    grid-row-start: 3;
+		    grid-row-end: 4;
+		}
+
+/*Encart Partez maintenant*/
+	#voyage{
+		background-image: url(images/lauch.jpg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 60rem;
+		margin-top: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	h1{
+		color: white;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-top: 5%;
+		margin-left: 3%;
+		border-style: solid;
+		border-color: white;
+		border-radius: 0.2rem;
+		font-family: 'earthorbiter';
+		text-align: center;
+		align-self: flex-start;
+	}
+	#formulaire{
+		border-style: solid;
+		border-radius: 0.2rem;
+		border-color: white;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-top: 20%;
+		margin-right: 30%;
+		align-self: flex-end;
+		display: flex;
+		flex-direction: column;
+	}
+	form{
+		display: inline-block;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	form select{
+		width: 15rem;
+		height: 2rem;
+		text-align: center;
+	}
+	#date1{
+		width: 12rem;
+		height: 2rem;
+		text-align: center;
+	}
+	form .bouton2{
+    background-image: url(images/icons8-rocket-48.png);
+    width: 2.9rem;
+    height: 2.9rem;
+    margin-top: 1.25px;
+    margin-left: 1.25px;
+	}
+		
+
+		@font-face{
+			font-family: 'Raleway';
+			src: url('Police/Raleway/Raleway-Medium.ttf');
+		}
+/*Footer*/
+		footer{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			max-height: 20rem;
+			margin: 0;
+			padding: 0rem 10rem;
+			color:white;
+			background-color: #2B2B2B;
+			font-family: 'Raleway';
+
+		}
+	/*Arborescence*/
+		footer ul{
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			list-style: none;
+			margin: 2rem;
+			border-left: 3px solid white;
+		}
+		footer>ul>li button{
+			color:white;
+			font-size: 12px;
+			font-weight: normal;
+			text-align: left;
+			width: 10rem;
+			margin: 0.5rem 0rem;
+			padding: 0rem;
+			border: none;
+			background:rgb(0,0,0,0);
+		}
+		footer>ul>li button:hover{
+			font-size: 12px;
+			font-weight: bold;
+			border-right: 2px solid white;
+		}
+	/*présentation projet*/
+		footer #footergauche{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+		footer>div>p{
+			font-size: 12px;
+			text-align: center;
+			line-height: 1.5rem;
+			margin: 1rem;
+		}
+		footer #validation{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			margin: 1rem;
+		}
+		footer #validation>img{
+			width: 5rem;
+			height: 2rem;
+			margin-top: 0rem;
+		}
+	/*Social media*/
+		#footerdroit{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			width: 20%;
+		}
+		footer #footerlogo{
+			width: 7rem;
+			height: 7rem;
+			margin: 1rem;
+		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+		}
+		footer a>img{
+			width: 1.5rem;
+			height: 1.5rem;
+			margin: 0.5rem;
+		}
+
+
+@media only screen and (max-width: 768px) {
+	body{
+		width: 100%
+	}
+	/*Queries nav*/
+
+		nav ul li{
+			writing-mode: vertical-lr;
+			text-orientation: upright;
+			font-size: 0.7rem;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+		}
+		nav ul li p img{
+			display: none;
+		}
+		nav ul li p{
+			writing-mode: vertical-lr;
+			text-orientation: upright;
+			font-size: 0.6rem;
+		}
+		nav ul li p img{
+			height: 1rem;
+			width: auto;
+		}
+		nav ul li input{
+		 width: 2rem;
+		 height: 6rem;
+		}
+
+	.SolSys{
+		    display: flex;
+		    margin-top: 9rem;
+		    flex-wrap: wrap;
+		    justify-content: center;
+		    margin-top: 0;
+	    	margin-left: 0;
+	}
+	.SolSys:hover{
+		display: none;
+	}
+	.SolSys img{
+		width: 3rem;
+		height: auto;
+	}
+	#bandeau1{
+		width: 100%;
+		height: 40rem;
+		margin-top: 0;
+	}
+	#voyage{
+		height: 40rem;
+		margin-top: 2rem;
+	}
+	#voyage h1{
+		align-self: center;
+		margin-top: 2rem;
+		margin-left:0;
+		padding: 0.5rem;
+		width: 80%;
+	}
+	#formulaire{
+		margin-top: 20%;
+		margin-right: 0;
+		align-self: center;
+	}
+
+
+	/*footer*/
+		footer{
+		display: flex;
+		flex-direction: column;
+		max-height: none;
+		padding: 2rem 0rem;
+		}
+		.footerelement{
+			margin: 1rem;
+		}
+		.footerelement:nth-child(1){
+			order: 2;
+		}
+		.footerelement:nth-child(2){
+			order: 1;
+		}
+		.footerelement:nth-child(3){
+			order: 3;
+		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+		}
+  }
