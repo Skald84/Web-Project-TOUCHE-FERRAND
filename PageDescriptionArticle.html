@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Page de description d'article</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+/*Général*/
+		@font-face{
+			font-family: 'Raleway';
+			src: url('Police/Raleway/Raleway-Medium.ttf');
+		}
+		*{
+			font-family: 'Raleway';
+			margin:0;
+		}
+		body{
+			margin: 0;
+		}
+		ul>li{
+			list-style: none;
+		}
+
+/*Header*/
+		nav{ 
+		   background-image:  -webkit-gradient(linear, 34% 3%, 18% 100%, from(#00F4FC), to(#C949B8), color-stop(.5,#999999));
+		   position:fixed;
+		   top: 0rem;
+		   left: 0rem;
+		   margin: 0 auto;
+		   width: 100%;
+		   opacity: 1;
+		   z-index: 10;
+		}
+		nav ul{
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    font-size: 1.2rem;
+		    height: 3rem;
+		}
+		nav a{
+		color: white;
+		text-decoration:none; 
+		}
+		nav ul li{
+		    width: 100%;
+		    list-style-type: none;
+		    display: flex;
+		    justify-content: center;
+		}
+		nav input{
+		    opacity: 0.4;
+		}
+
+		nav ul li .bouton{
+		    background-image: url(images/icons8-search-30.png);
+		    width: 2rem;
+		    height: 2rem;
+		}
+
+/*Corps*/
+		#corps{
+			display: flex;
+			flex-direction: column;
+		}
+
+	/*Paysage*/
+		#paysage{
+			background-image: url('images/paysage/science-fiction-illustration-01.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 50rem;
+			margin: 0;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		h2{
+			color:white;
+			font-size: 50px;
+			font-weight: bold;
+		}
+
+	/*Réservation*/
+		#reservation{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			color: #E0E0E0;
+			background-color: #7A7A7A;
+
+			height: 5rem;
+			margin: 0rem;
+		}
+		#reservation label{
+			margin: 0rem 0rem 0rem 3rem;
+		}
+		#reservation input{
+			height: 1.2rem;
+			margin: 1rem;
+		}
+
+	/*Description*/
+		.description{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		#bandeNav{
+			background-color: #2B2B2B;
+			height: 4rem;
+			margin: 0;
+		}
+		#menuDescription{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		section>ul>li>button{
+			color: gray;
+			font-size: 24px;
+			font-weight: bold;
+			width: 10rem;
+			margin: 1rem 3rem;
+
+			border: none;
+			background:rgb(0,0,0,0);
+		}
+		section>ul>li>button:hover{
+			color:white;
+			font-size: 30px;
+
+			transition: 0.4s;
+		}
+		#texteDescription{
+			text-align: center;
+		}
+		article{
+			width: 20%;
+		}
+		#texte1{
+			background-color: #DDD;
+
+			padding: 5rem 25rem 5rem 5rem;
+			margin: 3rem 0rem;
+		}
+		#texte2{
+			background-color: #DDD;
+
+			padding: 5rem 5rem 5rem 25rem;
+			margin: 3rem 0rem;
+		}
+
+		article>h3{
+			margin: 0 0 3rem 0;
+		}
+		article >p{
+			text-align: justify;
+		}
+		section >img{
+			position: relative;
+
+			box-shadow: 10px 10px 5px #555;
+		}
+		#img1{
+			width: 35rem;
+			height: 15rem;
+
+			right: 20rem;
+		}
+		#img2{
+			width: 35rem;
+			height: 15rem;
+
+			left: 20rem;
+		}
+
+/*Footer*/
+		footer{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			max-height: 15rem;
+
+			padding: 0rem 10rem;
+
+			color:white;
+			background-color: #2B2B2B;
+		}
+
+	/*Arborescence*/
+		footer ul{
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			list-style: none;
+
+			margin: 2rem;
+
+			border-left: 3px solid white;
+		}
+		footer>ul>li button{
+			color:white;
+			font-size: 12px;
+			font-weight: normal;
+
+			text-align: left;
+
+			width: 10rem;
+			margin: 0.5rem 0rem;
+			padding: 0rem;
+
+			border: none;
+			background:rgb(0,0,0,0);
+		}
+		footer>ul>li button:hover{
+			font-size: 12px;
+			font-weight: bold;
+
+			border-right: 2px solid white;
+		}
+
+	/*présentation projet*/
+		footer #footergauche{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		footer>div>p{
+			font-size: 12px;
+			text-align: center;
+			line-height: 1.5rem;
+			margin: 1rem;
+		}
+		footer #validation{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+
+			margin: 1rem;
+		}
+		footer #validation>img{
+			width: 5rem;
+			height: 2rem;
+			margin-top: 0rem;
+		}
+
+	/*Social media*/
+		#footerdroit{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+			width: 20%;
+		}
+		footer #footerlogo{
+			width: 7rem;
+			height: 7rem;
+			margin: 1rem;
+		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+		}
+		footer a>img{
+			width: 1.5rem;
+			height: 1.5rem;
+			margin: 0.5rem;
+		}
+
+/*media queries*/
+	@media screen and (max-width: 1100px){
+		#reservation{
+			flex-direction: column;
+			align-items: flex-end;
+
+			height: auto;
+			padding-top: 1%;
+			padding-right: 20%;
+			padding-left: 0%;
+		}
+		}
+		#reservation label{
+			margin: 0rem;
+		}
+	}
+	@media screen and (max-width: 1000px){
+	/*footer*/
+		footer{
+			display: flex;
+			flex-direction: column;
+
+			max-height: none;
+
+			padding: 2rem 0rem;
+		}
+		.footerelement{
+			margin: 1rem;
+		}
+		.footerelement:nth-child(1){
+			order: 2;
+		}
+		.footerelement:nth-child(2){
+			order: 1;
+		}
+		.footerelement:nth-child(3){
+			order: 3;
+		}
+	}
+	@media screen and (max-width: 800px){
+		#menuDescription{
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
+		#bandeNav{
+			height: 15rem;
+			justify-content: center;
+		}
+	}
+	@media screen and (max-width: 500px){
+		#reservation{
+			align-items: flex-start;
+			padding-left: 3%;
+		}
+		.resaselect{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	</style>
+</head>
+<body>
+
+<!--header-->
+	<header>
+	    <nav>
+	        <ul>
+	            <li><img src="images/icons8-launchpad-96.png"></li>
+	            <li><a href="">Accueil</a></li>
+	            <li><a href="">Séjours</a></li>
+	            <li><a href="">Les bons plans</a></li>
+	            <li><a href="">Contacts</a></li>
+	            <li><input id="search" type="chanp" value="Search ... " /> <input class="bouton" type="button" value=" " /></li>
+	            <li></li>
+	            <li><img src="images/icons8-launchpad-96.png"></li>
+	            <ul>
+	    </nav>
+	    <h1>Partez maintenant !</h1>
+	</header>
+
+<!--corps-->
+	<div id="corps">
+		<div>
+		<!--Paysage-->
+			<section id="paysage">
+				<h2>Planète 1</h2>
+			</section>
+
+		<!--Nav Intermédaire-->
+			<section id="bandeNav">
+				<ul id="menuDescription">
+					<li><button>Informations</button></li>
+					<li><button>Loisirs</button></li>
+					<li><button>Réservation</button></li>
+				</ul>
+			</section>	
+		</div>
+
+		<!--Réservation-->
+		<form id="reservation">
+			<div class="resaselect">
+				<label>Départ :</label>
+				<input type="date" name="datedepart">
+			</div>
+			<div class="resaselect">
+				<label>Arrivé :</label>
+				<input type="date" name="datearrivée">
+			</div>
+			<div class="resaselect">
+				<label>Nombre de personnes :</label>
+				<input type="Nombre" name="nbpersonne">
+			</div>
+			<input type="submit" name="valider" value="Valider">
+		</form>
+
+		<!--Description-->
+		<div>
+			<section class="description">
+				<article class="texteDescription" id="texte1">
+				<!--Titre1-->
+					<h3>Mars</h3>
+				<!--Paragraphe1-->
+					<p>Nunc aliquet lobortis risus eu congue. Duis laoreet faucibus maximus. Aliquam et sagittis enim. Nunc non luctus erat. Nunc tincidunt dui ante. Maecenas nisi diam, cursus sit amet facilisis quis, mollis ac purus. Duis purus ex, pretium non lorem sed, euismod placerat felis. Integer nec ligula ultricies, faucibus enim at, vulputate sapien. Aliquam erat volutpat. Vivamus nunc nulla, tempus nec dolor eget, placerat sodales nisl. Sed ac dapibus risus. Morbi accumsan sapien quis congue blandit. Vestibulum leo lectus, luctus at ultrices cursus, congue et magna.</p>
+				</article>
+				<!--images1-->
+				<img id="img1" src="images/paysage/science-fiction-illustration-01.jpg">
+
+				<!--images2-->
+				<img id="img2" src="images/paysage/science-fiction-illustration-01.jpg">
+				<article class="texteDescription" id="texte2">
+				<!--Titre2-->
+					<h3>Mars</h3>
+				<!--Paragraphe2-->
+					<p>Nunc aliquet lobortis risus eu congue. Duis laoreet faucibus maximus. Aliquam et sagittis enim. Nunc non luctus erat. Nunc tincidunt dui ante. Maecenas nisi diam, cursus sit amet facilisis quis, mollis ac purus. Duis purus ex, pretium non lorem sed, euismod placerat felis. Integer nec ligula ultricies, faucibus enim at, vulputate sapien. Aliquam erat volutpat. Vivamus nunc nulla, tempus nec dolor eget, placerat sodales nisl. Sed ac dapibus risus. Morbi accumsan sapien quis congue blandit. Vestibulum leo lectus, luctus at ultrices cursus, congue et magna.</p>
+				</article>
+			</section>
+		</div>
+	</div>
+
+<!--footer-->
+	<footer>
+	<!--footer gauche-->
+		<ul class="footerelement" id="footergauche">
+			<li><a href=""><button>Accueil</button></a></li>
+			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li>
+			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li>
+			<li><a href=""><button>Panier</button></a></li>
+			<li><a href=""><button>Qui sommes nous ?</button></a></li>
+			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li>
+		</ul>
+
+	<!--footer centre-->
+		<div class="footerelement" id="footercentre">
+			<p>
+				Un site web fièrement présenté<br>
+				par<br>
+				Aymeric TOUCHE & Gérome FERRAND<br>
+				IUT LYON 1 ASPE INFO<br>
+				projet Web (HTML5/CSS3)<br>
+				2018/2019<br>
+			</p>
+			<div id="validation">
+				<img alt="site en HTML5 validé par le W3C" src="images/W3CValidator/W3CHTML5Validation.png">
+				<img alt="site en CSS3 validé par le W3C" src="images/W3CValidator/W3CCSS3Validation.png">	
+			</div>
+		</div>
+
+	<!--footer droit-->
+		<div class="footerelement" id="footerdroit">
+			<img alt="Logo de l'agence de voyage galactique" id="footerlogo" src="images/logo.png">
+			<h3>Suivez-nous !</h3>
+			<div id="boutonsocialmedia">
+				<a href=""><img alt="Suivez-nous sur facebook" src="images/icones/icon.facebook.png"></a>
+				<a href=""><img alt="Suivez-nous sur twitter" src="images/icones/icon.twitter.png"></a>
+				<a href=""><img alt="Suivez-nous sur instagram" src="images/icones/icon.instagram.png"></a>
+				<a href=""><img alt="Suivez-nous sur linkedin" src="images/icones/icon.linkedin.png"></a>
+				<a href=""><img alt="Suivez-nous sur youtube" src="images/icones/icon.youtube.png"></a>
+				<a href=""><img alt="Suivez-nous sur google+" src="images/icones/icon.google+.png"></a>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
