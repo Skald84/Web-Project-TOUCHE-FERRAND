@@ -19,46 +19,71 @@
 			margin: 0;
 		}
 
-/*Header*/
-		nav{ 
-		   background-image:  -webkit-gradient(linear, 34% 3%, 18% 100%, from(#00F4FC), to(#C949B8), color-stop(.5,#999999));
-		   position:fixed;
-		   top: 0rem;
-		   left: 0rem;
-		   margin: 0 auto;
-		   width: 100%;
-		   opacity: 1;
-		   z-index: 10;
-		}
-		nav ul{
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		    font-size: 1.2rem;
-		    height: 3rem;
-		}
-		nav a{
-		color: white;
-		text-decoration:none; 
-		}
-		nav ul li{
-		    width: 100%;
-		    list-style-type: none;
-		    display: flex;
-		    justify-content: center;
-		}
-		nav input{
-		    opacity: 0.4;
-		}
-
-		nav ul li .bouton{
-		    background-image: url(images/icons8-search-30.png);
-		    width: 2rem;
-		    height: 2rem;
-		}
+/*header*/
+	header nav{ 
+	   background-image: linear-gradient(to bottom right, #2B2B2B, #1F1E1E);
+	   position:fixed;
+	   top: 0;
+	   left: 0;
+	   right: 0;
+	   margin: 0 auto;
+	   opacity: 1;
+	   z-index: 10;
+	}
+	header nav ul{
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    font-size: 1.2rem;
+	    height: 7rem;
+	    padding: 0;
+	}
+	header nav a{
+	color: white;
+	text-decoration:none; 
+	}
+	header nav ul li{
+	    width: 100%;
+	    list-style-type: none;
+	    display: flex;
+	    justify-content: center;
+	}
+	header nav input{
+	    opacity: 0.4;
+	    width:9rem;
+	}
+	header nav img{
+		height: 5rem;
+		width: auto;
+	}
+	header #ticket{
+	    width: 3rem;
+	    height: 3rem;
+	}
+	header #zone_embarquement{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+	}
+	header li p{
+		margin: 0rem;
+	    padding: 0rem;
+	    text-align: center;
+	    font-size: 0.8rem;
+	    color: white;
+	}
+	header nav ul li .bouton{
+	    background-image: url(images/icons8-search-30.png);
+	    width: 2rem;
+	    height: 2rem;
+	}
 
 /*Corps*/
 		#background{
+			margin-top: 9rem;
+
 			background-image: url('images/orbite/orbite7.jpg');
 			background-attachment: fixed;
 			background-repeat: no-repeat;
@@ -129,8 +154,10 @@
 
 			max-height: 20rem;
 
+			margin: 0;
 			padding: 0rem 10rem;
 
+			font-family: 'Raleway';
 			color:white;
 			background-color: #2B2B2B;
 		}
@@ -246,26 +273,41 @@
 		.footerelement:nth-child(3){
 			order: 3;
 		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+		}
 	}
 
 	</style>
+
 </head>
 <body>
+
 <!--header-->
 	<header>
-	    <nav>
-	        <ul>
-	            <li><img src="images/icons8-launchpad-96.png"></li>
-	            <li><a href="">Accueil</a></li>
-	            <li><a href="">Séjours</a></li>
-	            <li><a href="">Les bons plans</a></li>
-	            <li><a href="">Contacts</a></li>
-	            <li><input id="search" type="chanp" value="Search ... " /> <input class="bouton" type="button" value=" " /></li>
-	            <li></li>
-	            <li><img src="images/icons8-launchpad-96.png"></li>
-	            <ul>
-	    </nav>
-	    <h1>Partez maintenant !</h1>
+		<nav>
+			<ul>
+				<li id="logo1"><img alt="logo" src="images/logo.png"></li>
+				<li id="acc"><a href="Site2.html">Accueil</a></li>
+				<li id="Sej"><a href="PageListeProduit.html">Séjours</a></li>
+				<li id="promo"><a href="">Les bons plans</a></li>
+				<li id="zone_embarquement">
+					<p>
+						<a href="Site_voyage_zone_embarquement.html"><img  id="ticket" src="images/ticket.png" alt="icone_ticket"></a>
+					</p>
+					<a href="Site_voyage_zone_embarquement.html"><p>Embarquement</p></a>
+				</li>
+				<li id="search">
+						<input id="search" type="text" placeholder="Search ... " /> 
+						<a href="PageListeProduit.html">
+							<input class="bouton" type="button" value=" " />
+						</a>
+				</li>
+				<li><img alt="logo" src="images/logo.png"></li>
+			</ul>
+		</nav>
 	</header>
 
 <!--Corps-->
@@ -349,12 +391,12 @@
 	<footer>
 	<!--footer gauche-->
 		<ul class="footerelement" id="footergauche">
-			<li><a href=""><button>Accueil</button></a></li>
-			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li>
-			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li>
-			<li><a href=""><button>Panier</button></a></li>
-			<li><a href=""><button>Qui sommes nous ?</button></a></li>
-			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li>
+			<li><a href=""><button>Accueil</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href=""><button>Panier</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href=""><button>Qui sommes nous ?</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
 		</ul>
 
 	<!--footer centre-->

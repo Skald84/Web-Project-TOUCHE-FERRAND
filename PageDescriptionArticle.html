@@ -3,7 +3,7 @@
 <head>
 	<title>Page de description d'article</title>
 	<meta charset="utf-8">
-	<style type="text/css">
+	<style>
 /*Général*/
 		@font-face{
 			font-family: 'Raleway';
@@ -20,48 +20,77 @@
 			list-style: none;
 		}
 
-/*Header*/
-		nav{ 
-		   background-image:  -webkit-gradient(linear, 34% 3%, 18% 100%, from(#00F4FC), to(#C949B8), color-stop(.5,#999999));
-		   position:fixed;
-		   top: 0rem;
-		   left: 0rem;
-		   margin: 0 auto;
-		   width: 100%;
-		   opacity: 1;
-		   z-index: 10;
-		}
-		nav ul{
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		    font-size: 1.2rem;
-		    height: 3rem;
-		}
-		nav a{
-		color: white;
-		text-decoration:none; 
-		}
-		nav ul li{
-		    width: 100%;
-		    list-style-type: none;
-		    display: flex;
-		    justify-content: center;
-		}
-		nav input{
-		    opacity: 0.4;
-		}
-
-		nav ul li .bouton{
-		    background-image: url(images/icons8-search-30.png);
-		    width: 2rem;
-		    height: 2rem;
-		}
+/*header*/
+	header nav{ 
+	   background-image: linear-gradient(to bottom right, #2B2B2B, #1F1E1E);
+	   position:fixed;
+	   top: 0;
+	   left: 0;
+	   right: 0;
+	   margin: 0 auto;
+	   opacity: 1;
+	   z-index: 10;
+	}
+	header nav ul{
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    font-size: 1.2rem;
+	    height: 7rem;
+	    padding: 0;
+	}
+	header nav a{
+	color: white;
+	text-decoration:none; 
+	}
+	header nav ul li{
+	    width: 100%;
+	    list-style-type: none;
+	    display: flex;
+	    justify-content: center;
+	}
+	header nav input{
+	    opacity: 0.4;
+	    width:9rem;
+	}
+	header nav img{
+		height: 5rem;
+		width: auto;
+	}
+	header #ticket{
+	    width: 3rem;
+	    height: 3rem;
+	}
+	header #zone_embarquement{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+	}
+	header li p{
+		margin: 0rem;
+	    padding: 0rem;
+	    text-align: center;
+	    font-size: 0.8rem;
+	    color: white;
+	}
+	header nav ul li .bouton{
+	    background-image: url(images/icons8-search-30.png);
+	    width: 2rem;
+	    height: 2rem;
+	}
 
 /*Corps*/
 		#corps{
+			margin-top: 7rem;
+
 			display: flex;
 			flex-direction: column;
+
+			background-image: url(images/orbite/orbite6.jpg);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 		}
 
 	/*Paysage*/
@@ -122,7 +151,7 @@
 			flex-direction: row;
 			justify-content: center;
 		}
-		section>ul>li>button{
+		nav>ul>li>button{
 			color: gray;
 			font-size: 24px;
 			font-weight: bold;
@@ -132,29 +161,28 @@
 			border: none;
 			background:rgb(0,0,0,0);
 		}
-		section>ul>li>button:hover{
+		nav>ul>li>button:hover{
 			color:white;
 			font-size: 30px;
 
 			transition: 0.4s;
 		}
-		#texteDescription{
+		.texteDescription{
 			text-align: center;
+
+			background-color: #DDD;
+			opacity: 0.8;
+
+			margin: 3rem 0rem;
 		}
 		article{
 			width: 20%;
 		}
 		#texte1{
-			background-color: #DDD;
-
 			padding: 5rem 25rem 5rem 5rem;
-			margin: 3rem 0rem;
 		}
 		#texte2{
-			background-color: #DDD;
-
 			padding: 5rem 5rem 5rem 25rem;
-			margin: 3rem 0rem;
 		}
 
 		article>h3{
@@ -171,12 +199,14 @@
 		#img1{
 			width: 35rem;
 			height: 15rem;
+			z-index: 1;
 
 			right: 20rem;
 		}
 		#img2{
 			width: 35rem;
 			height: 15rem;
+			z-index: 1;
 
 			left: 20rem;
 		}
@@ -187,10 +217,12 @@
 			justify-content: space-around;
 			align-items: center;
 
-			max-height: 15rem;
+			max-height: 20rem;
 
+			margin: 0;
 			padding: 0rem 10rem;
 
+			font-family: 'Raleway';
 			color:white;
 			background-color: #2B2B2B;
 		}
@@ -279,7 +311,29 @@
 		}
 
 /*media queries*/
+	@media screen and (max-width: 1350px){
+	/*Corps*/
+		.description{
+			flex-direction: column;
+			margin: 0rem;
+		}
+		#texte1, #texte2{
+			width: 45%;
+			margin: 1rem;
+			padding: 3rem 10rem;
+		}
+		#img1{
+			margin: 1rem;
+			right: 0;
+			order: 1;
+		}
+		#img2{
+			margin: 1rem;
+			left: 0;
+		}
+	}
 	@media screen and (max-width: 1100px){
+	/*Réservation*/
 		#reservation{
 			flex-direction: column;
 			align-items: flex-end;
@@ -288,7 +342,6 @@
 			padding-top: 1%;
 			padding-right: 20%;
 			padding-left: 0%;
-		}
 		}
 		#reservation label{
 			margin: 0rem;
@@ -316,12 +369,29 @@
 		.footerelement:nth-child(3){
 			order: 3;
 		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+		}
 	}
 	@media screen and (max-width: 800px){
+	/*Corps*/
+		#texte1, #texte2{
+			width: 80%;
+			margin: 0rem;
+			padding: 3rem 5rem;
+		}
+
+	/*bande de navigation intermédiaire*/
 		#menuDescription{
 			flex-direction: column;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: space-around;
+
+			height: 100%;
+
+			padding: 0rem;
 		}
 		#bandeNav{
 			height: 15rem;
@@ -329,6 +399,7 @@
 		}
 	}
 	@media screen and (max-width: 500px){
+	/*Réservation*/
 		#reservation{
 			align-items: flex-start;
 			padding-left: 3%;
@@ -341,24 +412,33 @@
 	}
 
 	</style>
+
 </head>
 <body>
 
 <!--header-->
 	<header>
-	    <nav>
-	        <ul>
-	            <li><img src="images/icons8-launchpad-96.png"></li>
-	            <li><a href="">Accueil</a></li>
-	            <li><a href="">Séjours</a></li>
-	            <li><a href="">Les bons plans</a></li>
-	            <li><a href="">Contacts</a></li>
-	            <li><input id="search" type="chanp" value="Search ... " /> <input class="bouton" type="button" value=" " /></li>
-	            <li></li>
-	            <li><img src="images/icons8-launchpad-96.png"></li>
-	            <ul>
-	    </nav>
-	    <h1>Partez maintenant !</h1>
+		<nav>
+			<ul>
+				<li id="logo1"><img alt="logo" src="images/logo.png"></li>
+				<li id="acc"><a href="Site2.html">Accueil</a></li>
+				<li id="Sej"><a href="PageListeProduit.html">Séjours</a></li>
+				<li id="promo"><a href="">Les bons plans</a></li>
+				<li id="zone_embarquement">
+					<p>
+						<a href="Site_voyage_zone_embarquement.html"><img  id="ticket" src="images/ticket.png" alt="icone_ticket"></a>
+					</p>
+					<a href="Site_voyage_zone_embarquement.html"><p>Embarquement</p></a>
+				</li>
+				<li id="search">
+						<input id="search" type="text" placeholder="Search ... " /> 
+						<a href="PageListeProduit.html">
+							<input class="bouton" type="button" value=" " />
+						</a>
+				</li>
+				<li><img alt="logo" src="images/logo.png"></li>
+			</ul>
+		</nav>
 	</header>
 
 <!--corps-->
@@ -370,13 +450,13 @@
 			</section>
 
 		<!--Nav Intermédaire-->
-			<section id="bandeNav">
+			<nav id="bandeNav">
 				<ul id="menuDescription">
 					<li><button>Informations</button></li>
 					<li><button>Loisirs</button></li>
 					<li><button>Réservation</button></li>
 				</ul>
-			</section>	
+			</nav>	
 		</div>
 
 		<!--Réservation-->
@@ -387,11 +467,11 @@
 			</div>
 			<div class="resaselect">
 				<label>Arrivé :</label>
-				<input type="date" name="datearrivée">
+				<input type="date" name="datearrivee">
 			</div>
 			<div class="resaselect">
 				<label>Nombre de personnes :</label>
-				<input type="Nombre" name="nbpersonne">
+				<input type="number" name="nbpersonne">
 			</div>
 			<input type="submit" name="valider" value="Valider">
 		</form>
@@ -406,10 +486,10 @@
 					<p>Nunc aliquet lobortis risus eu congue. Duis laoreet faucibus maximus. Aliquam et sagittis enim. Nunc non luctus erat. Nunc tincidunt dui ante. Maecenas nisi diam, cursus sit amet facilisis quis, mollis ac purus. Duis purus ex, pretium non lorem sed, euismod placerat felis. Integer nec ligula ultricies, faucibus enim at, vulputate sapien. Aliquam erat volutpat. Vivamus nunc nulla, tempus nec dolor eget, placerat sodales nisl. Sed ac dapibus risus. Morbi accumsan sapien quis congue blandit. Vestibulum leo lectus, luctus at ultrices cursus, congue et magna.</p>
 				</article>
 				<!--images1-->
-				<img id="img1" src="images/paysage/science-fiction-illustration-01.jpg">
+				<img alt="payage de planete" class="imagedescription" id="img1" src="images/paysage/science-fiction-illustration-01.jpg">
 
 				<!--images2-->
-				<img id="img2" src="images/paysage/science-fiction-illustration-01.jpg">
+				<img alt="payage de planete" class="imagedescription" id="img2" src="images/paysage/science-fiction-illustration-01.jpg">
 				<article class="texteDescription" id="texte2">
 				<!--Titre2-->
 					<h3>Mars</h3>
@@ -424,12 +504,12 @@
 	<footer>
 	<!--footer gauche-->
 		<ul class="footerelement" id="footergauche">
-			<li><a href=""><button>Accueil</button></a></li>
-			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li>
-			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li>
-			<li><a href=""><button>Panier</button></a></li>
-			<li><a href=""><button>Qui sommes nous ?</button></a></li>
-			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li>
+			<li><a href=""><button>Accueil</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href=""><button>Panier</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href=""><button>Qui sommes nous ?</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
 		</ul>
 
 	<!--footer centre-->

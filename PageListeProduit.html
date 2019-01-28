@@ -18,45 +18,73 @@
 		}
 
 /*header*/
-		nav{ 
-		   background-image:  -webkit-gradient(linear, 34% 3%, 18% 100%, from(#00F4FC), to(#C949B8), color-stop(.5,#999999));
-		   position:fixed;
-		   top: 0rem;
-		   left: 0rem;
-		   margin: 0 auto;
-		   width: 100%;
-		   opacity: 1;
-		   z-index: 10;
-		}
-		nav ul{
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		    font-size: 1.2rem;
-		    height: 3rem;
-		}
-		nav a{
+	header nav{ 
+	   background-image: linear-gradient(to bottom right, #2B2B2B, #1F1E1E);
+	   position:fixed;
+	   top: 0;
+	   left: 0;
+	   right: 0;
+	   margin: 0 auto;
+	   opacity: 1;
+	   z-index: 10;
+	}
+	header nav ul{
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    font-size: 1.2rem;
+	    height: 7rem;
+	    padding: 0;
+	}
+	header nav a{
 		color: white;
 		text-decoration:none; 
-		}
-		nav ul li{
-		    width: 100%;
-		    list-style-type: none;
-		    display: flex;
-		    justify-content: center;
-		}
-		nav input{
-		    opacity: 0.4;
-		}
+	}
+	header nav ul li{
+	    width: 100%;
+	    list-style-type: none;
+	    display: flex;
+	    justify-content: center;
+	}
+	header nav input{
+	    opacity: 0.4;
+	    width:9rem;
+	}
+	header nav img{
+		height: 5rem;
+		width: auto;
+	}
+	header #ticket{
+	    width: 3rem;
+	    height: 3rem;
+	}
+	header #zone_embarquement{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+	}
+	header li p{
+		margin: 0rem;
+	    padding: 0rem;
+	    text-align: center;
+	    font-size: 0.8rem;
+	    color: white;
+	}
+	header  ul li .bouton{
+	    background-image: url(images/icons8-search-30.png);
+	    width: 2rem;
+	    height: 2rem;
+	}
 
-		nav ul li .bouton{
-		    background-image: url(images/icons8-search-30.png);
-		    width: 2rem;
-		    height: 2rem;
-		} 
 /*Corps*/
 		#corps{
+			margin-top: 9rem;
+
 			display: flex;
+
+			background-color: #CCC;
 			width: 100%;
 		}
 	/*Liste*/
@@ -114,7 +142,6 @@
 			align-items: center;
 
 			width: 30%;
-			height: 76%;
 			padding: 3rem;
 
 			color: white;
@@ -135,14 +162,14 @@
 				color: white;
 				font-weight: bold;
 
-				border-color: #00F4FC;
-				background-color: #00F4FC;
+				border-color: #306888;
+				background-color: #306888;
 				background-image: linear-gradient(rgba(255,255,255,0), black);
 				transition: background-color 1s;
 			}
 			.btnExplo:hover{
 				transform: translateY(-3px);
-				background-color: #C949B8;
+				background-color: #BD561A;
 			} 
 
 	/*filtres*/
@@ -153,10 +180,9 @@
 
 			margin: 1rem 2rem 0rem 0rem;
 			padding: 1rem;
+			z-index: 1
 
 			font-weight: bold;
-			color: #333;
-			background-color: #FAFAFA;
 		}
 		#menuFiltre summary{
 			color: #333;
@@ -189,12 +215,12 @@
 			justify-content: space-around;
 			align-items: center;
 
-			max-height: 15rem;
+			max-height: 20rem;
 
 			margin: 0;
 			padding: 0rem 10rem;
-			bottom: 0rem;
 
+			font-family: 'Raleway';
 			color:white;
 			background-color: #2B2B2B;
 		}
@@ -270,7 +296,7 @@
 		footer #footerlogo{
 			width: 7rem;
 			height: 7rem;
-			margin: -1rem 0rem;
+			margin: 1rem;
 		}
 		footer #boutonsocialmedia{
 			display: flex;
@@ -284,6 +310,7 @@
 
 /*media queries*/
 	@media screen and (max-width: 1500px){
+	/*Filtres*/
 		#corps{
 			display: flex;
 			flex-direction: column; 
@@ -301,10 +328,19 @@
 		}
 		#menuFiltre summary{
 			width: 100%;
-
 		}
 	}
 	@media screen and (max-width: 1000px){
+	/*liste étiquettes*/
+		.destination{
+			flex-direction: column;
+
+			width: 100%;
+			height: 100%;
+		}
+		.etiquette p{
+			display: none;
+		}
 	/*footer*/
 		footer{
 			display: flex;
@@ -326,28 +362,43 @@
 		.footerelement:nth-child(3){
 			order: 3;
 		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+		}
 	}
 
 
 	</style>
-	
+
 </head>
 <body>
 
 <!--header-->
-    <nav>
-        <ul>
-            <li><img src="images/icons8-launchpad-96.png"></li>
-            <li><a href="">Accueil</a></li>
-            <li><a href="">Séjours</a></li>
-            <li><a href="">Les bons plans</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><input id="search" type="chanp" value="Search ... " /> <input class="bouton" type="button" value=" " /></li>
-            <li></li>
-            <li><img src="images/icons8-launchpad-96.png"></li>
-            <ul>
-    </nav>
-    <h1>Partez maintenant !</h1>
+	<header>
+		<nav>
+			<ul>
+				<li id="logo1"><img alt="logo" src="images/logo.png"></li>
+				<li id="acc"><a href="Site2.html">Accueil</a></li>
+				<li id="Sej"><a href="PageListeProduit.html">Séjours</a></li>
+				<li id="promo"><a href="">Les bons plans</a></li>
+				<li id="zone_embarquement">
+					<p>
+						<a href="Site_voyage_zone_embarquement.html"><img  id="ticket" src="images/ticket.png" alt="icone_ticket"></a>
+					</p>
+					<a href="Site_voyage_zone_embarquement.html"><p>Embarquement</p></a>
+				</li>
+				<li id="search">
+						<input id="search" type="text" placeholder="Search ... " /> 
+						<a href="PageListeProduit.html">
+							<input class="bouton" type="button" value=" " />
+						</a>
+				</li>
+				<li><img alt="logo" src="images/logo.png"></li>
+			</ul>
+		</nav>
+	</header>
 
 <!--corps-->
 	<div id="corps">
@@ -377,39 +428,39 @@
 				<summary>Type</summary>
 				<div class="categorie" id="catType">
 					<div>
-						<input type="radio" name="tellurique">
+						<input type="radio" id="tellurique" name="tellurique">
 						<label for="tellurique">Tellurique</label>
 					</div>
 					<div>
-						<input type="radio" name="tellurique">
+						<input type="radio" id="tellurique" name="tellurique">
 						<label for="tellurique">Gazeuse</label>
 					</div>
 					<div>
-						<input type="radio" name="atmosphere">
+						<input type="radio" id="atmosphere" name="atmosphere">
 						<label for="atmosphere">Atmosphère présente</label>
 					</div>
 					<div>
-						<input type="radio" name="atmosphere">
+						<input type="radio" id="atmosphere" name="atmosphere">
 						<label for="atmosphere">Sans atmosphère</label>
 					</div>
 					<div>
-						<input type="checkbox" name="Colonisee">
+						<input type="checkbox" id="Colonisee" name="Colonisee">
 						<label for="Colonisee">Colonisée</label>
 					</div>
 					<div>
-						<input type="checkbox" name="Vierge">
+						<input type="checkbox" id="Vierge" name="Vierge">
 						<label for="Vierge">Vierge</label>
 					</div>
 					<div>
-						<input type="radio" name="rotation">
+						<input type="radio" id="rotation" name="rotation">
 						<label for="rotation">Période de rotation longue</label>
 					</div>
 					<div>
-						<input type="radio" name="rotation">
+						<input type="radio" id="rotation" name="rotation">
 						<label for="rotation">Période de rotation moyenne</label>
 					</div>
 					<div>
-						<input type="radio" name="rotation">
+						<input type="radio" id="rotation" name="rotation">
 						<label for="rotation">Période de rotation courte</label>
 					</div>
 				</div>
@@ -485,12 +536,12 @@
 	<footer>
 	<!--footer gauche-->
 		<ul class="footerelement" id="footergauche">
-			<li><a href=""><button>Accueil</button></a></li>
-			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li>
-			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li>
-			<li><a href=""><button>Panier</button></a></li>
-			<li><a href=""><button>Qui sommes nous ?</button></a></li>
-			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li>
+			<li><a href=""><button>Accueil</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="PageListeProduit.html"><button>Liste des produits</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="PageDescriptionArticle.html"><button>Description de produit</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href=""><button>Panier</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href=""><button>Qui sommes nous ?</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
+			<li><a href="CompteRenduTechnique.html"><button>CR du projet</button></a></li><!--Utilisation de bouton dans des liens car pas de PHP !-->
 		</ul>
 
 	<!--footer centre-->
