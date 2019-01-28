@@ -1,0 +1,275 @@
+/*Général*/
+		@font-face{
+			font-family: 'Raleway';
+			src: url('Police/Raleway/Raleway-Medium.ttf');
+		}
+		*{
+			font-family: 'Raleway';
+		}
+		ul>li{
+			list-style: none;
+		}
+		body{
+			margin: 0;
+		}
+
+/*header*/
+	header nav{ 
+	   background-image: linear-gradient(to bottom right, #2B2B2B, #1F1E1E);
+	   position:fixed;
+	   top: 0;
+	   left: 0;
+	   right: 0;
+	   margin: 0 auto;
+	   opacity: 1;
+	   z-index: 10;
+	}
+	header nav ul{
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    font-size: 1.2rem;
+	    height: 7rem;
+	    padding: 0;
+	}
+	header nav a{
+	color: white;
+	text-decoration:none; 
+	}
+	header nav ul li{
+	    width: 100%;
+	    list-style-type: none;
+	    display: flex;
+	    justify-content: center;
+	}
+	header nav input{
+	    opacity: 0.4;
+	    width:9rem;
+	}
+	header nav img{
+		height: 5rem;
+		width: auto;
+	}
+	header #ticket{
+	    width: 3rem;
+	    height: 3rem;
+	}
+	header #zone_embarquement{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+	}
+	header li p{
+		margin: 0rem;
+	    padding: 0rem;
+	    text-align: center;
+	    font-size: 0.8rem;
+	    color: white;
+	}
+	header nav ul li .bouton{
+	    background-image: url(images/icons8-search-30.png);
+	    width: 2rem;
+	    height: 2rem;
+	}
+
+/*Corps*/
+		#background{
+			margin-top: 9rem;
+
+			background-image: url('images/orbite/orbite7.jpg');
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#corps{
+			min-height: 37rem;
+			color: #333;
+			background-color: #FAFAFA;
+
+			margin: 0 20%;
+			padding: 2% 10%;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		#logo{
+			max-width: 10rem;
+			height: auto;
+		}
+		details>details{
+			padding-left: 4rem;
+		}
+		#corps img{
+			width: 100%;
+			height: 100%;
+		}
+		#corps>h1{
+			font-size: 50px;
+			font-weight: bold;
+
+			text-align: center;
+
+			margin: 5rem;
+		}
+		details{
+			font-size: 32px;
+			margin: 1rem;
+			align-self: flex-start;
+
+		}
+		details>summary{
+			font-weight: bold;
+		}
+		details details>summary{
+			font-size: 80%;
+		}
+		#corps p{
+			text-align: justify;
+			text-indent: 5rem;
+			line-height: 1.5em;
+			font-size: 18px;
+		}
+		#corps ul, #corps ul>li{
+			text-align: justify;
+			line-height: 2em;
+			font-size: 18px;
+
+			list-style: square;
+		}
+
+/*Footer*/
+		footer{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			max-height: 20rem;
+
+			margin: 0;
+			padding: 0rem 10rem;
+
+			font-family: 'Raleway';
+			color:white;
+			background-color: #2B2B2B;
+		}
+
+	/*Arborescence*/
+		footer ul{
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			list-style: none;
+
+			margin: 2rem;
+
+			border-left: 3px solid white;
+		}
+		footer>ul>li button{
+			color:white;
+			font-size: 12px;
+			font-weight: normal;
+
+			text-align: left;
+
+			width: 10rem;
+			margin: 0.5rem 0rem;
+			padding: 0rem;
+
+			border: none;
+			background:rgb(0,0,0,0);
+		}
+		footer>ul>li button:hover{
+			font-size: 12px;
+			font-weight: bold;
+
+			border-right: 2px solid white;
+		}
+
+	/*présentation projet*/
+		footer #footergauche{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		footer>div>p{
+			font-size: 12px;
+			text-align: center;
+			line-height: 1.5rem;
+			margin: 1rem;
+		}
+		footer #validation{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+
+			margin: 1rem;
+		}
+		footer #validation>img{
+			width: 5rem;
+			height: 2rem;
+			margin-top: 0rem;
+		}
+
+	/*Social media*/
+		#footerdroit{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+			width: 20%;
+		}
+		footer #footerlogo{
+			width: 7rem;
+			height: 7rem;
+			margin: 1rem;
+		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+		}
+		footer a>img{
+			width: 1.5rem;
+			height: 1.5rem;
+			margin: 0.5rem;
+		}
+
+/*media queries*/
+	@media screen and (max-width: 1200px){
+		details>details{
+			padding-left: 0rem;
+		}
+	}
+	@media screen and (max-width: 1000px){
+	/*footer*/
+		footer{
+			display: flex;
+			flex-direction: column;
+
+			max-height: none;
+
+			padding: 2rem 0rem;
+		}
+		.footerelement{
+			margin: 1rem;
+		}
+		.footerelement:nth-child(1){
+			order: 2;
+		}
+		.footerelement:nth-child(2){
+			order: 1;
+		}
+		.footerelement:nth-child(3){
+			order: 3;
+		}
+		footer #boutonsocialmedia{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+		}
+	}
