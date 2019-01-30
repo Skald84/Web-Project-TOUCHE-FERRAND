@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Mon site de voyage</title>
-        <link rel="stylesheet" href="About_us.css" />
+        <link rel="stylesheet" href="Site_voyage2.css" />
     </head>
 
     <body>
@@ -31,27 +31,53 @@
 				</nav>
 			</header>
 
-			<section>
-				<h1>Qui sommes nous?</h1>
-				<div id="Lentreprise">
-					<h2>Notre compagnie</h2>
-					<p>Qui n'a jamais regardé le ciel en pleine nuit et révé d'y aller?<br><br>
-						Cette idée ne nous a jamais quitté et notre rêve est devenu réalté avec les voyages galactiques.<br>Nous vous proposons des dizaines de destinations à travers le système solaire et les systèmes adjascents.<br><br>Nous sommes une entreprise française née il y a quelques temps. Nous recherchons sans cesse à inover pour rendre votre expérience toujours plus folle et respectueuse notre environnement qui s'agrandi de jour en jour.
-					</p>
+	    	<div id="bandeau1">
+	    		<section class="titre">
+	    		<h1>Un petit pas pour l'Homme, un grand pas pour l'humanité<br><br>Partez à la decouverte du cosmos... </h1>
+				</section>
+				<!--grille système solaire-->
+					<section class="SolSys">
+						<img class="sun" alt="img_sun" src="images/icons8-sun-star-96.png">
+						<img class="mercury" alt="img_mercury" src="images/icons8-planète-mercure-96.png">
+						<img class="venus" alt="img_venus" src="images/icons8-planète-venus-96(1).png">
+						<img class="earth" alt="img_earth" src="images/icons8-planète-terre-96.png">
+						<img class="mars" alt="img_mars" src="images/icons8-planète-mars-96.png">
+						<img class="jupiter" alt="img_jupiter" src="images/icons8-planète-jupiter-96.png">
+						<img class="saturn" alt="img_saturn" src="images/icons8-planète-saturne-96.png">
+						<img class="uranus" alt="img_uranus" src="images/icons8-planète-uranus-96.png">
+						<img class="neptune" alt="img_neptune" src="images/icons8-planète-neptune-96.png">	
+					</section>
+	    	</div>
+    	
+			<!--Choix voyage-->
+				<div id="voyage">
+					<h1>Partez maintenant !</h1>
+					<section id="formulaire">
+			    		<form action="#" method="post">
+			    			<p>
+			    				<select>
+			    					<optgroup label="Tourisme orbital">
+					    				<option>Neptune</option>
+					    				<option>Uranus</option>
+					    				<option>Jupiter</option>
+					    				<option>Soleil</option>
+					    			</optgroup>
+			    					<optgroup label="Tourisme">
+					    				<option>Mars</option>
+					    				<option>Mercure</option>
+					    				<option>Venus</option>
+					    			</optgroup>
+			    			</select>
+			    			</p>
+			    			<p>
+			    				<input id="date1" type="date" max="2021-12-31" />
+			    				<a href="PageDescriptionArticle.html">
+			    					<input class="bouton2" type="button" value="" />
+			    				</a>
+			    			</p>
+			    		</form>
+					</section>
 				</div>
-				<div id="experience">
-					<h2>Une expérience unique</h2>	
-					<p>En quelques secondes, réservez votre voyage à travers l'espace vers la destination de votre choix.<br>Vivez une expérience unique et exceptionnelle en traversant le cosmos comme un vrai astronaute.<br><br>Nos voyages durent entre 8 mois et 10 ans selon la formule et la destianation voule.<br> Que vous soyez adepte du tourisme orbital pour admirer les vents de jupiter au chaud dans un vaisseau tout confort ou dans un pod en orbite basse, ou passionné d'aventure, voulant absolument fouler le sol de Mars ou de Mercure 
-					</p>				
-				</div>
-				<div id="voyages">
-					<h2>Des voyages inoubliables</h2>
-					<p>En plus de l'expérience unique de vol en ZERO-G vous serez éblouis par la beauté des paysages spatiaux.<br>Les étoiles et nébuleuse que vous pourres croisez, es planètes que vous pourrez atteindre sont toutes uniques et rien sur notre bonne vieille planète Terre n'est comparable.<br>Si vous avez une expérience à tenter dans votre vie, c'est probablement celle là... Alors contactez nous, ou reservez dès aujourd'hui !</p>
-				</div>
-				<div>
-					
-				</div>
-			</section>
 <!--footer-->
 	<footer>
 	<!--footer gauche-->
@@ -95,4 +121,5 @@
 		</div>
 </footer>
 
+</body>
 </html>
